@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<header>
+		<div class="main_page">
+			<div class="table">
+				<div class="main_page__logo"><a href=""><img src="img/logo.png" alt=""><a></div>
+
+					<div class="main_page__menu">
+						<ul>
+							<li><a href="">mans</a></li>
+							<li><a href="">womans</a></li>
+							<li><a href="">brands</a></li>
+							<li><a href="">sale</a></li>
+							<li><a href="">news</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="main_page__center">
+					<p>STÜSSY2014</p>
+				</div>
+
+				<div class="shop_now">
+					<p>shop now</p>
+				</div>
+
+				<div class="main_page__footer"></div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="left">
+					<div>
+						<img class="big_brand" src="img/nfn.png" alt="">
+					</div>
+					<h2 class="big_img"><span class="big_img__span">SHOP GOURMET</span></h2>
+				</div>
+				<div class="right_top">
+					<div>
+						<img class="brand_top" src="img/carharrt.png" alt="">
+					</div>
+					<h2><span>SHOP CARHARTT</span></h2>
+				</div>
+				<div class="right_down">
+					<div>
+						<img class="brand_top" src="img/adidas.png" alt="">
+					</div>
+					<h2><span>SHOP ADIDAS</span></h2>
+				</div>
+				<div class="bottom_1">
+					<div>
+						<img class="brand" src="img/10_deep.png" alt="">
+					</div>
+					<h2><span>SHOP ADIDAS</span></h2>
+				</div>
+				<div class="bottom_2">
+					<div>
+						<img class="brand" src="img/palace.png" alt="">
+					</div>
+					<h2><span>SHOP ADIDAS</span></h2>
+				</div>
+				<div class="bottom_3">
+					<div>
+						<img class="brand" src="img/nike.png" alt="">
+					</div>
+					<h2><span>SHOP ADIDAS</span></h2>
+				</div>
+			</div>
+		</main>
+
+		<section class="inst">
+			<div class="inst__name"><p>#ICNtDY ON INSTAGRAM</p></div>
+			<div class="inst__last_name"><p>VIEW HASHTAG</p></div>
+			<div class="image_gallery_1"></div>
+			<div class="image_gallery_2"></div>
+			<div class="image_gallery_3"></div>
+			<div class="image_gallery_4"></div>
+			<div class="image_gallery_5"></div>
+			<div class="image_gallery_6"></div>
+			<div class="image_gallery_7"></div>
+			<div class="image_gallery_8"></div>
+		</section>
+
+		<footer>
+			<div>	
+				<ul class="footer_menu">
+					<li><a href="">©ICNDY2014</a></li>
+					<li><a href="">PRIVACY</a></li>
+					<li><a href="">TERMS</a></li>
+					<li><a href="">SHOP</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="">CONTACT</a></li>
+				</ul>
+			</div>	
+			<div>
+				<ul class="footer_social">
+					<li><a href=""><img src="img/FB.png" alt=""></a></li>
+					<li><a href=""><img src="img/TWTR.png" alt=""></a></li>
+					<li><a href=""><img src="img/IG.png" alt=""></a></li>
+				</ul>
+			</div>
+		</footer>
+
+<!--Mobile menu -->
+<section class="mobile-menu">
+					<div class="menu">
+						<nav class="menu__nav">
+							<ul class="r-list menu__list">
+								<li class="menu__group">
+									<a href="#0" class="r-link menu__link">mans</a>
+								</li>
+								<li class="menu__group">
+									<a href="#0" class="r-link menu__link">womans</a>
+								</li>
+								<li class="menu__group">
+									<a href="#0" class="r-link menu__link">sale</a>
+								</li>
+								<li class="menu__group">
+									<a href="#0" class="r-link menu__link">brands</a>
+								</li>
+								<li class="menu__group">
+									<a href="#0" class="r-link menu__link">news</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu__toggle">
+							<button class="r-button menu__hamburger">
+								<span class="m-hamburger">
+									<span class="m-hamburger__label">Открыть меню</span>
+								</span>
+							</button>
+						</div>  
+					</div>
+					<!--  -->
+					</section>
+
+		<script>
+			(function(){
+				'use strict';
+
+				class Menu {
+					constructor(settings) {
+						this.menuNode = settings.menuNode;
+					}
+
+					toggleMenuState(className) {      
+						if (typeof className !== 'string' || className.length === 0) {
+							return console.log('you did not give the class for toggleState function');
+						} 
+						return  this.menuNode.classList.toggle(className);
+					}
+				}
+
+				const jsMenuNode = document.querySelector('.menu');
+				const demoMenu = new Menu ({
+					menuNode: jsMenuNode
+				});
+
+				function callMenuToggle(event) {
+					demoMenu.toggleMenuState('menu_activated');
+				}
+
+				jsMenuNode.querySelector('.menu__hamburger').addEventListener('click', callMenuToggle);
+			})();
+		</script>
+</body>
+</html>
